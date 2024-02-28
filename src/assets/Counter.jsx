@@ -6,7 +6,7 @@ export default function Counter() {
         setCount(count + 1);
     }
     function decrement() {
-        setCount(count - 1);
+        if(count > 0) setCount(count - 1);
     }
 
     return (
@@ -15,5 +15,5 @@ export default function Counter() {
             <button onClick={increment}>Increment</button>
             <button onClick={decrement}>Decrement</button>
         </div>
-    );
+    )
 }

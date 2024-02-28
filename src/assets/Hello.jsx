@@ -9,9 +9,19 @@ const Hello = ({ name, message }) => {
 
 import PropTypes from 'prop-types'
 
+// Hello.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   message: PropTypes.string.isRequired
+// }
+
 Hello.propTypes = {
-  name: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired
+  name: PropTypes.string,
+  message: PropTypes.string
+}
+
+Hello.defaultProps = {
+  name: "Default",
+  message: "Hey"
 }
 
 export default Hello
